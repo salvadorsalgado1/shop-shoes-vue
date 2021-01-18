@@ -1,12 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Front from '../views/Front.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'Front',
+    component: Front
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home
   },
