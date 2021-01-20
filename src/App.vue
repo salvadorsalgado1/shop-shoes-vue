@@ -2,14 +2,16 @@
   <div id="app">
     <Navbar/>
     <router-view/>
+    <FooterSection/>
   </div>
 </template>
 <script>
 
 import Navbar from './components/Navbar'
+import FooterSection from './components/FooterSection'
 export default {
   components:{
-    Navbar
+    Navbar, FooterSection
   }
 }
 </script>
@@ -29,9 +31,6 @@ body{
   background-size: cover;
 }
 
-#nav {
-  padding: 30px;
-}
 
 #nav a {
   font-weight: bold;
@@ -40,5 +39,18 @@ body{
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.header-text-p{
+  font-size:1.6em;
+}
+.card-heading-h2{
+  font-size:1.4em;
+}
+.footer{
+  height:20vh;
+  background-color:rgba(154, 144, 100, 0.4);
+  border:1px solid white;
+  margin-top:20px;
+  border-radius:10px 5px 0px 0px;
 }
 </style>

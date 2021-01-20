@@ -1,5 +1,7 @@
 <template>
   <div class="shoe-carousel">
+    <div class="container">
+      <div class="card mt-4 mb-4">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -31,6 +33,9 @@
   </a>
 </div>
   </div>
+  
+    </div>
+    </div>
 </template>
 
 <script>
@@ -43,11 +48,9 @@ data(){
 mounted(){
 
     $(document).ready(function(){
-
-    // jQuery code is in here
-$('.carousel').carousel({
-  interval: 2000
-})
+      $('.carousel').carousel({
+        interval: 2000
+      })
 });
     
 }

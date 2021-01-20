@@ -1,8 +1,9 @@
 <template>
   <div class="front">
     <div class="container animate__animated animate__fadeIn animate__delay-1s">
-      <img src="@/assets/logo_transparent.png" class="img-fluid" alt="Shoe Creative"/>
-      <router-link :to='{name:"Home"}' class="btn btn-lg text-white btn-outline-secondary">Proceed</router-link>
+      <img src="@/assets/logo_transparent-low.png" class="img-fluid" alt="Shoe Creative"/>
+      <br/>
+      <router-link :to='{name:"Home"}' class="btn btn-lg text-white btn-outline-secondary mt-5">Proceed</router-link>
     </div> 
   </div>
 </template>
