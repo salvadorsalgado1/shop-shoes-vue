@@ -6,7 +6,7 @@
       <p class="text-white header-text-p"><em>Staff Picks</em> features shoes that are hand chosen by our staff. This listing of shoes are favorites among
       <em>Creative Shoes</em>.
       </p>
-      <hr class="text-white"/>
+      
       <div class="row">
         
         <div class="col col-md-6 col-sm-12 col-lg-4">
