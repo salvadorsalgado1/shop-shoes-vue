@@ -33,6 +33,6 @@ export default {
 <style>
 .shoe-creative-header{
   width:100%!important;
-  border:white solid 2px;
+  border:white solid 1px;
 }
 </style>
