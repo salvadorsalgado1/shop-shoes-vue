@@ -2,16 +2,15 @@
   <div id="app">
     <Navbar/>
     <router-view/>
-    <FooterSection/>
+    
   </div>
 </template>
 <script>
 
 import Navbar from './components/Navbar'
-import FooterSection from './components/FooterSection'
 export default {
   components:{
-    Navbar, FooterSection
+    Navbar
   }
 }
 </script>
