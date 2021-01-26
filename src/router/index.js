@@ -8,6 +8,7 @@ import MenShoes from '../views/MenShoes.vue'
 import StaffPicks from '../views/StaffPicks.vue'
 import Trending from '../views/Trending.vue'
 import WomenShoes from '../views/WomenShoes.vue'
+import Cart from '../views/Cart.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -51,6 +52,11 @@ const routes = [
     path: '/trending',
     name: 'Trending',
     component: Trending
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
   },
   {
     path: '/about',

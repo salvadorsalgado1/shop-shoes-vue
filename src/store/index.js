@@ -5,12 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    cart:0
+    cart:0,
+    items:[],
+    picks:[],
+    checkout:[]
   },
   mutations: {
-    increment(state){
-      state.cart++
+    cartIncrement(state, payload){
+      state.cart++;
+      
+      state.checkout.push(payload);
+    },
+    removeCartItem(state, payload){
+      
     }
+    
   },
   actions: {
   },

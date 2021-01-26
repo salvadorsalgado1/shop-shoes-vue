@@ -45,11 +45,5 @@ body{
 .card-heading-h2{
   font-size:1.4em;
 }
-.footer{
-  height:10vh;
-  background-color:rgba(154, 144, 100, 0.4);
-  border:1px solid white;
-  margin-top:20px;
-  border-radius:10px 5px 0px 0px;
-}
+
 </style>

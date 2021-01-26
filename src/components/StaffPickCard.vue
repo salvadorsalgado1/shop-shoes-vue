@@ -6,30 +6,37 @@
         <div class="card-body">
          <div class="row">
            <p class="card-text text-left lead">
+             {{brand}}
+             <br/>
             {{text}}
             <br/>${{price}}
-            <br/>Product: {{id}}</p>
+            <br/>Product: {{id}} <br/>
+            
+            </p>
+            
             
             
          </div>
-         
-            <button @click="addToCart(id)" class="btn btn-primary">Add to Cart</button>
+            <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-primary">Add to Cart</button>
         </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-props:['image', 'title', 'text', 'price', 'id'],
+props:['image', 'title', 'text', 'price', 'id', 'brand'],
 data(){
   return{
-
+    success:'Added to cart!'
   }
 },
 methods:{
-  addToCart(id){
+  addToCart(id, title, image, text, price, brand){
     console.log(`${id} added to cart!`);
-    this.$store.commit('increment');
+    let item = {id:id, title:title, image:image, text:text, price:price, brand:brand};
+    
+    this.$store.commit('cartIncrement', item);
+   
 
   }
 }
