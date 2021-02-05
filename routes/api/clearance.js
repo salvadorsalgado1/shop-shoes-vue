@@ -24,7 +24,8 @@ router.get('/info/', (req, res, next)=>{
     inner join heroku_7a5b103bbc9db4f.inventory on titles.product_id = inventory.product_id \
     inner join heroku_7a5b103bbc9db4f.prices on titles.product_id = prices.product_id \
     inner join heroku_7a5b103bbc9db4f.url on titles.product_id = url.product_id \
-    where categories.shoes_women = 1;"
+    inner join heroku_7a5b103bbc9db4f.ratings on titles.product_id = ratings.product_id \
+    where prices.discount > 0 limit 10;"
     db.query(sqlGet, (err, result)=>{
         res.send(result)
     })

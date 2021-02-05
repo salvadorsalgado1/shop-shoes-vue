@@ -3,8 +3,9 @@
       <HeaderImg/>
       <div class="container">
       <h1 class="display-4 text-white">Staff Picks</h1>
-      <p class="text-white header-text-p"><em>Staff Picks</em> features shoes that are hand chosen by our staff. This listing of shoes are favorites among
-      <em>Creative Shoes</em>.
+      <p class="text-white header-text-p"><em>Staff Picks</em> features shoes that are hand chosen by our staff. 
+      This listing of shoes are favorites among
+      <em>Creative Shoes</em>. Just a slight reminder, the juice is temporary, and the sauce is forever.
         <div class="row mb-4">
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
             <ProductCard

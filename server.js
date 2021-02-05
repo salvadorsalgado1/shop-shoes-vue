@@ -20,6 +20,15 @@ app.use('/api/women', women);
 const men = require('./routes/api/men')
 app.use('/api/men', men);
 
+const latest = require('./routes/api/latest')
+app.use('/api/latest', latest);
+
+const trending = require('./routes/api/trending')
+app.use('/api/trending', trending);
+
+const clearance = require('./routes/api/clearance')
+app.use('/api/clearance', clearance);
+
 if(process.env.NODE_ENV === 'production'){
     //Set static folder
     app.use(express.static(__dirname + '/dist'));

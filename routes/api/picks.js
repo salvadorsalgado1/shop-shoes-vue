@@ -19,11 +19,7 @@ router.get('/info/', (req, res, next)=>{
     inventory.stock, \
     prices.listing_price, \
     prices.discount, \
-    url.image_url_one, \
-    url.image_url_two, \
-    url.image_url_three, \
-    url.image_url_four, \
-    url.image_url_five \
+    url.image_url_one \
     from heroku_7a5b103bbc9db4f.titles inner join heroku_7a5b103bbc9db4f.categories on titles.product_id = categories.product_id \
     inner join heroku_7a5b103bbc9db4f.inventory on titles.product_id = inventory.product_id \
     inner join heroku_7a5b103bbc9db4f.prices on titles.product_id = prices.product_id \

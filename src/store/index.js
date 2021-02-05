@@ -12,7 +12,10 @@ export default new Vuex.Store({
     total:0,
     discounts:0,
     women:null,
-    men:null
+    men:null,
+    latest:null,
+    trending:null,
+    clearance:null
   },
   mutations: {
     cartIncrement(state, payload){

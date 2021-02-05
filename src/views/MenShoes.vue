@@ -3,7 +3,7 @@
       <HeaderImg/>
       <div class="container">
       <h1 class="display-4 text-white">Shoes for Men</h1>
-      <p class="text-white header-text-p"><em>Staff Picks</em> features shoes that are hand chosen by our staff. This listing of shoes are favorites among
+      <p class="text-white header-text-p">This is a dedicated aisle for <em>men</em>.
       <em>Creative Shoes</em>.
         <div class="row mb-4">
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
