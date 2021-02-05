@@ -48,7 +48,7 @@ computed:{
 mounted(){
     if(this.$store.state.picks == null){
       console.log("picks null")
-      Axios.get('http://localhost:5000/api/picks/info')
+      Axios.get('/api/picks/info')
       .then(response=>{
         console.log(response.data)
         this.$store.state.picks = response.data

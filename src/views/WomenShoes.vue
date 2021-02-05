@@ -49,7 +49,7 @@ computed:{
 mounted(){
     if(this.$store.state.women == null){
       console.log("picks null")
-      Axios.get('http://localhost:5000/api/women/info')
+      Axios.get('/api/women/info')
       .then(response=>{
         console.log(response.data)
         this.$store.state.women = response.data
