@@ -7,25 +7,25 @@ export default new Vuex.Store({
   state: {
     cart:0,
     items:[],
-    picks:[],
+    picks:null,
     checkout:[],
     total:0,
-    discounts:0
+    discounts:0,
+    women:null,
+    men:null
   },
   mutations: {
     cartIncrement(state, payload){
       state.cart++;
       state.checkout.push(payload);
+      
     },
     removeCartItem(state, payload){
-      /*state.checkout = state.checkout.filter(list=>{
-        return list.id != id
-      })*/
-
       state.checkout = state.checkout.filter(list=>{
         return list.id !== payload.id
       })
-    }
+    },
+    
     
   },
   actions: {

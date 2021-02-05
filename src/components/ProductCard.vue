@@ -11,12 +11,9 @@
             {{text}}
             <br/>${{price}}
             <br/>Product: {{id}} <br/>
-            
             </p>
-            
-            
-            
          </div>
+        
             <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-primary">Add to Cart</button>
         </div>
     </div>
@@ -30,6 +27,7 @@ data(){
     success:'Added to cart!'
   }
 },
+
 methods:{
   addToCart(id, title, image, text, price, brand){
     console.log(`${id} added to cart!`);

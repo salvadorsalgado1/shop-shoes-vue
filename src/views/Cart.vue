@@ -2,7 +2,7 @@
   <div class="cart">
       <div class="container mb-2">
           <div class="row mt-5">
-              <div class="col-md-8 col-sm-12">
+              <div v-if="emptyCart" class="col-md-8 col-sm-12">
                   <ul class="list-group">
                     <li class="list-group-item text-right mb-4" v-for="(list, id) in checkoutCart" :key="id">
                         <img :src="list.image" class="float-left w-25 mr-4"  alt=""/>
@@ -50,6 +50,13 @@ computed:{
         let basket = this.$store.state.checkout
         return basket;
     },
+    emptyCart(){
+        if(this.$store.state.cart > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 },
 
@@ -57,5 +64,10 @@ computed:{
 }
 </script>
 <style>
-
+.shopping-cart{
+    font-size:2.6em;
+}
+.empty-cart-text{
+    font-size:1.6em;
+}
 </style>
