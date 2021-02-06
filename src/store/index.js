@@ -15,7 +15,9 @@ export default new Vuex.Store({
     men:null,
     latest:null,
     trending:null,
-    clearance:null
+    clearance:null,
+    id:null,
+    check:null
   },
   mutations: {
     cartIncrement(state, payload){
@@ -28,6 +30,12 @@ export default new Vuex.Store({
         return list.id !== payload.id
       })
     },
+    viewItem(state,payload){
+      state.id = payload
+    },
+    setCheck(state,payload){
+      state.check = payload
+    }
     
     
   },

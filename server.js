@@ -29,6 +29,9 @@ app.use('/api/trending', trending);
 const clearance = require('./routes/api/clearance')
 app.use('/api/clearance', clearance);
 
+const check = require('./routes/api/check')
+app.use('/api/check', check);
+
 if(process.env.NODE_ENV === 'production'){
     //Set static folder
     app.use(express.static(__dirname + '/dist'));
