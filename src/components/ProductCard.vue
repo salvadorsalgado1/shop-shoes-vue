@@ -8,6 +8,7 @@
             <p class="lead text-left">
               <br/>{{brand}}
             {{text}}<br/>Product: {{id}}</p>
+            <p v-if="success">{{feedback}}</p>
             <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-primary">Add to Cart</button>
             <button @click="viewItem(id)" class="btn btn-secondary ml-4">Check It Out</button>
         </div>
@@ -17,10 +18,12 @@
 <script>
 export default {
 props:['image', 'title', 'text', 'price', 'id', 'brand'],
+
 data(){
   return{
-    success:'Added to cart!',
-    shoeID:null
+    success:true,
+    shoeID:null,
+    feedback:'Added to cart!'
   }
 },
 

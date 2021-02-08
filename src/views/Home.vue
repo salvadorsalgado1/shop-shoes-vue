@@ -4,10 +4,10 @@
       <MainHeaderImg/>
     </div>
     <div class="container">
-      <h1 class="display-4 text-white">Welcome to Shoe Creative!</h1>
+      <h1 class="display-4 text-white">Welcome to Soled Out Kicks!</h1>
       <p class="text-white lead header-text-p">
         This site features only the coolest kicks and a 
-        variety a shoes to choose from. Check 
+        variety of shoes to choose from. Check 
         out our clearance section for exclusive deals!
       </p>
     </div>
@@ -17,7 +17,6 @@
   </div>
 </template>
 <script>
-import Axios from 'axios'
 import ShoeCarousel from '../components/ShoeCarousel'
 import Squares from '../components/Squares'
 import MainHeaderImg from '../components/MainHeaderImg'

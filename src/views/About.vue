@@ -1,6 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about pagee</h1>
+    <div class="container">
+      <img class="img-fluid" src="@/assets/logos/transparent-logo.png" alt="Soled Out Kicks"/>
+    </div>
+    <h1 class="text-white">About Us</h1>
+    <p class="text-white">Soled Out Kicks caters to all that wish to seek alternative shoes that fit outside their comfort zone. It was all started by a </p>
   </div>
 </template>
 <script>
@@ -18,4 +22,7 @@ export default {
   
 }
 </script>
+<style>
+
+</style>
 
