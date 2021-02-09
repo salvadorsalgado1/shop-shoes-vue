@@ -2,7 +2,7 @@
   <div class="cart">
       <div class="container mb-2">
           <div class="row mt-5">
-              <div v-if="emptyCart" class="col-md-8 col-sm-12">
+              <div v-if="emptyCart" class="col-md-12 col-sm-12 col-lg-6">
                   <ul class="list-group">
                     <li class="list-group-item text-right mb-4" v-for="(list, id) in checkoutCart" :key="id">
                         <img :src="list.image" class="float-left w-25 mr-4"  alt=""/>
@@ -17,7 +17,7 @@
                     </li>
                 </ul>
               </div>
-              <div class="col-md-4 col-sm-12">
+              <div class="col-md-12 col-sm-12 col-lg-6">
                   <Total/>
               </div>
           </div>
