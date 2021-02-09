@@ -10,6 +10,7 @@ import Trending from '../views/Trending.vue'
 import WomenShoes from '../views/WomenShoes.vue'
 import Cart from '../views/Cart.vue'
 import Shoe from '../views/Shoe.vue'
+import Media from '../views/Media.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -64,6 +65,11 @@ const routes = [
     name: 'Shoe',
     component: Shoe,
     props:true
+  },
+  {
+    path: '/media',
+    name: 'Media',
+    component: Media
   },
   {
     path: '/about',

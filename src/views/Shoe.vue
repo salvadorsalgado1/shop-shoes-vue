@@ -1,7 +1,11 @@
 <template>
   <div class="shoe-view">
       <div class="container">
+           
           <div v-for="(shoe, index) in shoes" :key="index">
+              <div v-if="loading">
+        <Loading />
+      </div>
                 <div class="row mt-4">
                     <div class="col-md-5">
                     <CheckCarousel 
@@ -26,14 +30,15 @@
 <script>
 import Axios from 'axios'
 import CheckCarousel from '../components/CheckCarousel'
+import Loading from '../components/Loading'
 export default {
 components:{
-CheckCarousel
+CheckCarousel, Loading
 },
 name:'Shoe',
 data(){
     return{
-
+        loading:false
     }
 },
 computed:{
@@ -43,11 +48,13 @@ computed:{
     }
 },
 mounted(){
+    this.loading==true
     Axios.get(`/api/check/info/${this.$store.state.id}`)
     .then(response=>{
         console.log(response.data)
         let data = response.data;
         this.$store.commit('setCheck', data)
+        this.loading=false;
     })
 }
 }

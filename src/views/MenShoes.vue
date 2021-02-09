@@ -5,6 +5,9 @@
       <h1 class="display-4 text-white">Shoes for Men</h1>
       <p class="text-white header-text-p">This is a dedicated aisle for <em>men</em>.
       <em>Creative Shoes</em>.
+       <div v-if="loading">
+        <Loading />
+      </div>
         <div class="row mb-4">
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
             <ProductCard
@@ -25,15 +28,17 @@
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 import Axios from 'axios'
+import Loading from '../components/Loading'
 export default {
 name:'MenShoes',
 components:{
   HeaderImg,
-  ProductCard
+  ProductCard,
+  Loading
 },
 data(){
   return{
-
+    loading:false
   }
 },
 methods:{
@@ -48,11 +53,13 @@ computed:{
 },
 mounted(){
     if(this.$store.state.men == null){
+      this.loading=true;
       console.log("picks null")
       Axios.get('/api/men/info')
       .then(response=>{
         console.log(response.data)
         this.$store.state.men = response.data
+        this.loading=false;
       })
     }
   }

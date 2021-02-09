@@ -5,7 +5,10 @@
       <h1 class="display-4 text-white">Staff Picks</h1>
       <p class="text-white header-text-p"><em>Staff Picks</em> features shoes that are hand chosen by our staff. 
       This listing of shoes are favorites among
-      <em>Creative Shoes</em>. Just a slight reminder, the juice is temporary, and the sauce is forever.
+      <em>Creative Shoes</em>. Just a slight reminder, the juice is temporary, and the sauce is forever.</p>
+      <div v-if="loading">
+        <Loading />
+      </div>
         <div class="row mb-4">
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
             <ProductCard
@@ -22,6 +25,7 @@
   </div>
 </template>
 <script>
+import Loading from '../components/Loading'
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 import Axios from 'axios'
@@ -29,11 +33,12 @@ export default {
 name:'StaffPicks',
 components:{
   HeaderImg,
-  ProductCard
+  ProductCard,
+  Loading
 },
 data(){
   return{
-
+    loading:false
   }
 },
 methods:{
@@ -48,12 +53,15 @@ computed:{
 },
 mounted(){
     if(this.$store.state.picks == null){
-      console.log("picks null")
+      this.loading=true;
       Axios.get('/api/picks/info')
       .then(response=>{
         console.log(response.data)
+        
         this.$store.state.picks = response.data
+        this.loading=false;
       })
+
     }
   }
 

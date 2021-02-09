@@ -1,5 +1,5 @@
 <template>
-<div v-if="this.$route.name !== 'Front'" class="nav-bar">
+<div v-if="this.$route.name !== 'Front'" class="nav-bar mb-4">
   <nav class="navbar navbar-expand-lg navbar-light lead" style="background-color: rgba(154,144,100,.5);"> 
   <router-link class="navbar-brand lead" :to='{name:"Front"}'>
     <img src="@/assets/logo_transparent-2.png" width="50" height="50" alt="Shoe Creative, Front Page">
@@ -20,9 +20,6 @@
       </li>
       <li class="nav-item">
         <router-link :to='{name:"About"}' class="nav-link">About</router-link>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
