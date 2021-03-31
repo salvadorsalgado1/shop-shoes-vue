@@ -23,6 +23,7 @@ mounted(){
 
 <style>
 .front-image{
+  margin-top:100px;
   width:60%;
 }
 </style>
