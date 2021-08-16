@@ -11,6 +11,7 @@ import WomenShoes from '../views/WomenShoes.vue'
 import Cart from '../views/Cart.vue'
 import Shoe from '../views/Shoe.vue'
 import Media from '../views/Media.vue'
+import EditShoe from '../views/EditShoe.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -70,6 +71,12 @@ const routes = [
     path: '/media',
     name: 'Media',
     component: Media
+  },
+  {
+    path: '/edit-shoe',
+    name: 'EditShoe',
+    component: EditShoe,
+    props:true
   },
   {
     path: '/about',

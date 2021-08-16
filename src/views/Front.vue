@@ -15,8 +15,6 @@ components:{
 },
 mounted(){
   
-
-
 }
 }
 </script>

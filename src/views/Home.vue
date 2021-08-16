@@ -12,8 +12,9 @@
       </p>
     </div>
     <p><a href="#squares" class="btn btn-secondary btn-lg">Learn More</a></p>
-    <ShoeCarousel/>
+    
     <Squares/>
+    <ShoeCarousel/>
   </div>
 </template>
 <script>
@@ -36,7 +37,7 @@ export default {
 </script>
 <style>
 .shoe-creative-header{
-  width:30%!important;
+  width:30% !important;
   
 }
 </style>

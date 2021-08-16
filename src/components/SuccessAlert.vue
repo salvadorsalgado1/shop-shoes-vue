@@ -1,5 +1,15 @@
 <template>
     <div class="alert alert-success" role="alert">
-        Added to cart!
+        {{text}}
     </div>
 </template>
+ 
+<script>
+export default {
+props:['text']
+}
+</script>
+
+<style>
+
+</style>

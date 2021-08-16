@@ -5,8 +5,9 @@
               <div v-if="emptyCart" class="col-md-12 col-sm-12 col-lg-6">
                   <ul class="list-group">
                     <li class="list-group-item text-right mb-4" v-for="(list, id) in checkoutCart" :key="id">
+                        <p>{{id}}</p>
                         <img :src="list.image" class="float-left w-25 mr-4"  alt=""/>
-                        <button @click="removeFromCart(list.id)" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+                        <button @click="removeFromCart(id)" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
                         <div class="text-left">
                             <h2>{{list.title}}</h2>
                             <p>{{list.brand}}</p>
@@ -40,9 +41,13 @@ data(){
       cart:[]
   }
 },
+mounted(){
+     
+},
 methods:{
-    removeFromCart(id){
-        this.$store.commit('removeCartItem', {id});
+    removeFromCart(index){
+        this.$store.commit('removeCartItem', {index});
+        console.log(index);
     }
 },
 computed:{

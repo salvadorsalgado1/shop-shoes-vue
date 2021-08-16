@@ -26,21 +26,36 @@
                 </tr>
             </tbody>
             </table>
-        <button class="btn btn-outline-primary btn-block">Order</button>
-        <button @click="generate('fr')" class="btn-block btn btn-outline-secondary">Print Receipt</button>
+            <div v-if="success" class="text-center">
+                <SuccessAlert text="Your order has been placed!"/>
+            </div>
+            
+        
+        <button @click="order" class="btn btn-outline-primary btn-block">Order</button>
+        <div v-if="ordered">
+        <button @click="generate('fr')" class="btn-block btn btn-outline-secondary mt-3">Print Receipt</button>
+
+        </div>
         </div>
     </div>
 </template>
 <script>
 import jsPDF from 'jspdf'
+import SuccessAlert from '../components/SuccessAlert.vue'
 export default {
+    components:{SuccessAlert},
     data(){
         return{
             tax:0,
-            total:0
+            total:0,
+            success:false,
+            ordered:false
         }
     },
 computed:{
+    discounts(){
+        return 0;
+    },
     finalTaxPrice(){
         let amount = this.$store.state.checkout;
         let final = 0;
@@ -68,20 +83,50 @@ computed:{
         
     },
     methods:{
+        order(){
+            this.success = true;
+            this.ordered = true;
+            setTimeout(()=>{
+                this.success = false;
+            }, 2000)
+        },
        generate(){
-        let pdfName = 'test';
-        
+
+       let currentTime = new Date();
+       let minutes = currentTime.getMinutes();
+       let hours = currentTime.getHours();
+       if(hours == 0){
+           hours = 12;
+       }
+       let day = currentTime.getDate();
+       let month = currentTime.getMonth()+1;
+       let year = currentTime.getFullYear();
+       let time = `${month}/${day}/${year} ${hours}:${minutes} `;
+     
+         let pdfName = 'receipt';
+         
         let img = new Image();
-        let src = "https://shop-online-vue.herokuapp.com/img/logo.f4d0786c.png"
-        img.src = src;
-
-
         var doc = new jsPDF();
-        doc.addImage(img, "png", 65, 125, 80, 80);
-        doc.autoTable({html: '#fr'});
-       
-        doc.setLanguage("en-US");
+       // let src = "https://shop-online-vue.herokuapp.com/img/logo.f4d0786c.png"
+        img.src = "https://shop-online-vue.herokuapp.com/img/logo.f4d0786c.png";
+        doc.addImage(img, 'png', 20, 20, 80, 80);
+
+
+         doc.setLanguage("en-US");
+         doc.text(120, 40, `Number of Items: ${this.numItems}`);
+         doc.text(120, 50, `Price: $ ${this.total.toFixed(2)}`);
+         doc.text(120, 60, `Discounts: $ ${this.discounts.toFixed(2)}`);
+         doc.text(120, 70, `Tax (%10) $ ${this.tax.toFixed(2)}`)
+         doc.text(120, 75, "_____________________");
+        doc.text(120, 85, `Final Price: $ ${this.finalTaxPrice}`);
+        doc.text(20, 140, `${time}`);
+        doc.text(20, 150, "We take pride in our shoes. All returns are valid");
+        doc.text(20, 160, "up to seven days. If you have any questions, please");
+        doc.text(20, 170, "feel free to drop in. Thank you for your business!");
+
+
         doc.save(pdfName + '.pdf');
+ 
        }
     }
     
