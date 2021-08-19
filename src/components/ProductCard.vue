@@ -1,6 +1,6 @@
 <template>
   <div class="staff-pick-card">
-    <div class="card staff-pick">
+    <div class="card staff-pick" id="staff-pick">
       <div class="card-header mb-4">
          <p class="card-title card-heading-h2">{{title}}</p>
       </div>
@@ -21,19 +21,19 @@
           <div v-if="added">
              <SuccessAlert text="Added to cart!"/>
           </div>
-          <div class="row mb-2 ml-auto">
+        </div>
+        <div class="product-card-btn mb-3 container">
+            <div class="row mb-2 ml-auto">
             <span v-for="index in stars" :key="index">
               <StarRating/>
             </span>
-            <div class="mt-2 ml-2">( {{reviews}} )</div>
+            <div class="mt-2">( {{reviews}} )</div>
           </div>
-          
-          
-            
             <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-block btn-primary">Add to Cart</button>
-            <button @click="viewItem(id)" class="btn btn-secondary btn-block ">More</button>         
-        </div>
+            <button @click="viewItem(id)" class=" btn btn-secondary btn-block ">More</button> 
+        </div>  
     </div>
+    
   </div>
 </template>
 <script>
@@ -75,13 +75,15 @@ methods:{
 }
 </script>
 <style>
+ 
 .price-amount{
   font-size:1.4em; 
 }
 .card-img-top{
   width:100%;
 }
-.card{
-  min-height:500px;
+#staff-pick{
+  min-height:20em;
+  height:30em;
 }
 </style>
