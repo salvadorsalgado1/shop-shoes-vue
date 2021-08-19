@@ -19,13 +19,15 @@ router.get('/info/', (req, res, next)=>{
     inventory.stock, \
     prices.listing_price, \
     prices.discount, \
-    url.image_url_one \
+    url.image_url_one, \
+    ratings.rating, \
+    ratings.reviews\
     from heroku_7a5b103bbc9db4f.titles inner join heroku_7a5b103bbc9db4f.categories on titles.product_id = categories.product_id \
     inner join heroku_7a5b103bbc9db4f.inventory on titles.product_id = inventory.product_id \
     inner join heroku_7a5b103bbc9db4f.prices on titles.product_id = prices.product_id \
     inner join heroku_7a5b103bbc9db4f.url on titles.product_id = url.product_id \
     inner join heroku_7a5b103bbc9db4f.ratings on titles.product_id = ratings.product_id \
-    ORDER by ratings.rating desc limit 20;"
+     ORDER by ratings.rating desc limit 20;"
     db.query(sqlGet, (err, result)=>{
         res.send(result)
     })

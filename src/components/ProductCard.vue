@@ -14,11 +14,22 @@
               <br/>{{brand}}
             {{text}}<br/>Product: {{id}}</p>
          </div>
+         
       </div>
+      
         <div class="card-body card-body-text">
-          <div class="" v-if="added">
+          <div v-if="added">
              <SuccessAlert text="Added to cart!"/>
           </div>
+          <div class="row mb-2 ml-auto">
+            <span v-for="index in stars" :key="index">
+              <StarRating/>
+            </span>
+            <div class="mt-2 ml-2">( {{reviews}} )</div>
+          </div>
+          
+          
+            
             <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-block btn-primary">Add to Cart</button>
             <button @click="viewItem(id)" class="btn btn-secondary btn-block ">More</button>         
         </div>
@@ -26,18 +37,21 @@
   </div>
 </template>
 <script>
+import StarRating from '../components/StarRating'
 import SuccessAlert from '../components/SuccessAlert';
 export default {
-props:['image', 'title', 'text', 'price', 'id', 'brand'],
+props:['image', 'title', 'text', 'price', 'id', 'brand', 'stars', 'reviews'],
 components:{
-  SuccessAlert
+  SuccessAlert,
+  StarRating
 },
 data(){
   return{
     success:true,
     shoeID:null,
     feedback:'Added to cart!',
-    added:false
+    added:false,
+    starNumber:4
   }
 },
 
@@ -66,6 +80,8 @@ methods:{
 }
 .card-img-top{
   width:100%;
-  
+}
+.card{
+  min-height:500px;
 }
 </style>

@@ -17,7 +17,9 @@
               :text="shoe.type"
               :price="shoe.listing_price"
               :id="shoe.product_id"
-              :brand="shoe.brand"/>
+              :brand="shoe.brand"
+              :stars="shoe.rating"
+              :reviews="shoe.reviews"/>
           </div>
         </div>
       </div>

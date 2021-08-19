@@ -18,6 +18,9 @@
               :price="shoe.listing_price"
               :id="shoe.product_id"
               :brand="shoe.brand"
+              :stars="shoe.rating"
+              :reviews="shoe.reviews"
+
             />
           </div>
         </div>
@@ -55,7 +58,7 @@ computed:{
 mounted(){
     if(this.$store.state.clearance == null){
       this.loading=true
-      console.log("picks null")
+     
       Axios.get('/api/clearance/info')
       .then(response=>{
         console.log(response.data)

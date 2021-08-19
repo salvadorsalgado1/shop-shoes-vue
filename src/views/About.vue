@@ -10,7 +10,7 @@
       do not give up until the customer is satisfied with her/his descision on a pair of shoes.</p>
        <h2 class="text-white">History</h2>
        
-       <img src="@/assets/soled-out-kicks-classic.jpg"/>
+       <img class="float-end" src="@/assets/soled-out-kicks-classic.jpg" alt=""/>
        <p class="about-text text-left mt-4">It was all started by a local family in a small town around Los Angeles, California. The shoemakers were convinced that shoes will be around forever.
          There will be advances in styles and different colors. 
          At first, when the store opened, business was often slow and if any, ever existent.
@@ -35,7 +35,7 @@ export default {
 </script>
 <style>
 .about-text{
-  font-size:1.8em;
+  font-size:1.4em;
 }
 </style>
 

@@ -63,6 +63,7 @@ router.get('/info/:id', (req, res, next)=>{
     titles.product_title, \
     titles.brand,\
     inventory.stock, \
+    ratings.rating, \
     prices.listing_price, \
     prices.discount, \
     url.image_url_one, \
@@ -76,6 +77,7 @@ router.get('/info/:id', (req, res, next)=>{
     inner join heroku_7a5b103bbc9db4f.prices on titles.product_id = prices.product_id \
     inner join heroku_7a5b103bbc9db4f.url on titles.product_id = url.product_id \
     inner join heroku_7a5b103bbc9db4f.content on titles.product_id = content.product_id \
+    inner join heroku_7a5b103bbc9db4f.ratings on titles.product_id = ratings.product_id\
     where titles.product_id = ?";
     
     db.query(sqlGet, id, (err, result)=>{
