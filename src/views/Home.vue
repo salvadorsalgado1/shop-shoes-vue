@@ -11,15 +11,18 @@
         out our clearance section for exclusive deals!
       </p>
       <p><a href="#squares" class="btn btn-secondary btn-lg">Learn More</a></p>
-    
     <Squares/>
-     
     </div>
-     <SecondSection/>
+    <ThirdSection/>
+    <SecondSection/>
+    <NewsSection/>
+     
   </div>
 </template>
 <script>
 import SecondSection from '../components/sections/SecondSection'
+import ThirdSection from '../components/sections/ThirdSection'
+import NewsSection from '../components/sections/NewsSection'
  import Squares from '../components/Squares'
 import MainHeaderImg from '../components/MainHeaderImg'
 export default {
@@ -30,9 +33,11 @@ export default {
     }
   },
   components: {
-     Squares,
+    Squares,
     MainHeaderImg,
-    SecondSection
+    SecondSection,
+    ThirdSection,
+    NewsSection
   },
 }
 </script>

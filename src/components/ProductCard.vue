@@ -27,7 +27,7 @@
             <span v-for="index in stars" :key="index">
               <StarRating/>
             </span>
-            <div class="mt-2">( {{reviews}} )</div>
+            <div class="mt-1">( {{reviews}} )</div>
           </div>
             <button @click="addToCart(id, title, image, text, price, brand)" class="btn btn-block btn-primary">Add to Cart</button>
             <button @click="viewItem(id)" class=" btn btn-secondary btn-block ">More</button> 

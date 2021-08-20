@@ -18,7 +18,8 @@ export default new Vuex.Store({
     clearance:null,
     id:null,
     check:null,
-    edit:[]
+    edit:[],
+    news:[]
 
   },
   mutations: {
@@ -37,12 +38,20 @@ export default new Vuex.Store({
     },
     setEditShoe(state, payload){
       state.edit = payload;
+    },
+    setNews(state, payload){
+      state.news = payload;
     }
-    
-    
   },
   actions: {
-    
+    setDailyNews({commit}){
+      fetch('https://newsapi.org/v2/top-headlines?country=us&category=sports&from=2021-08-18&sortBy=publishedAt&apiKey=012173bc4da74432ae2a08a0b1047e09')
+       .then(response=>response.json())
+       .then(data=>{
+          let news = data.articles.splice(0,5); 
+          commit('setNews', news);
+       })
+    },
    removeCartItem(context){
       context.commit('removeCartItem',id);
     },

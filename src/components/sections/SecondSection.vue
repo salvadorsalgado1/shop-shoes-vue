@@ -1,29 +1,25 @@
 <template>
   <div class="second-section">
-      <h2 class="text-left mt-5 mb-5 ml-3">More to Explore</h2>
-      <div class="container">
-          <div class="row">
-                <div class="col-md-5 mb-3">
-                    <ShoeCarousel/>
-                </div>
-                
-                <div class="col-md-7 mb-3">
-                    <div class="card card-next-level">
-          <div class="card-body">
-            <p class="lead next-level">Walk Up to the Next Level</p>
-            <router-link class="btn btn-secondary btn-lg" :to="{name:'StaffPicks'}">Top Picks</router-link>
+      <h2 class="display-4 text-left mb-3 ml-3">Gallery</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 mb-3 col-sm-12">
+          <ShoeCarousel/>
+        </div>
+        <div class="col-md-5 mb-3 col-sm-12">
+          <div class="card card-next-level">
+            <div class="card-body">
+              <p class="lead next-level">Walk Up to the Next Level</p>
+                <router-link class="btn btn-secondary btn-lg" :to="{name:'StaffPicks'}">Top Picks</router-link>
+            </div>
           </div>
         </div>
-                </div>
-          </div>
       </div>
-      
+    </div>
   </div>
 </template>
-
 <script>
 import ShoeCarousel from '../../components/ShoeCarousel'
-
 export default {
     data(){
         return{
@@ -32,16 +28,14 @@ export default {
     },
     components: {
     ShoeCarousel,
-     
   },
-
 }
 </script>
 
 <style>
 div .second-section{
     
-    margin:5% 0;
+    margin:3% 0;
 }
 .next-level{
    font-family:Optima, sans-serif;
@@ -53,8 +47,7 @@ div .second-section{
   color:white;
 }
 .second-section{
-    border:white 5px solid;
-    height:100%;
-    background-color:white;
-}
+  height:100%;
+  color:white;
+ }
 </style>

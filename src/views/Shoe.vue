@@ -20,21 +20,26 @@
                     <div class="col-md-7">
                         <p class="shoe-price text-white text-left">${{shoe.listing_price}}</p>
                         <p class="text-left shoe-description text-white">Description: {{shoe.content}}</p>
-                        <p class="text-white">Currently in stock: {{shoe.stock}}</p>'
-                        <p><router-link class="btn btn-primary btn-block" :to="{name:'Home'}">Home</router-link>
-                            <router-link class="btn btn-primary btn-block" :to="{name:'EditShoe', 
-                            params:{
-                            id:shoe.product_id,
-                            shoeBrand:shoe.brand, 
-                            shoeTitle: shoe.product_title, 
-                            shoePrice: shoe.listing_price, 
-                            shoeCont: shoe.content, 
-                            url1:shoe.image_url_one, 
-                            url2:shoe.image_url_two, 
-                            url3:shoe.image_url_three, 
-                            url4:shoe.image_url_four,
-                            url5:shoe.image_url_five }}">Edit</router-link>
-                        </p>
+                        <p class="text-white">Currently in stock: {{shoe.stock}}</p>
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6 mb-4">
+                                <router-link class="btn btn-primary btn-block" :to="{name:'Home'}">Home</router-link>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 mb-4">
+                                <router-link class="btn btn-primary btn-block" :to="{name:'EditShoe', 
+                                    params:{
+                                    id:shoe.product_id,
+                                    shoeBrand:shoe.brand, 
+                                    shoeTitle: shoe.product_title, 
+                                    shoePrice: shoe.listing_price, 
+                                    shoeCont: shoe.content, 
+                                    url1:shoe.image_url_one, 
+                                    url2:shoe.image_url_two, 
+                                    url3:shoe.image_url_three, 
+                                    url4:shoe.image_url_four,
+                                    url5:shoe.image_url_five }}">Edit</router-link>
+                            </div>
+                        </div>
                     </div>
                 </div>
           </div>
