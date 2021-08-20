@@ -24,7 +24,7 @@
       <div class="carousel-caption d-none d-md-block">
           
           <p class="entry-desc">{{entry.description}}</p>
-          <h3>by {{entry.author}}</h3>
+          <h3>{{entry.author}}</h3>
       </div>
       </a>
     </div>
@@ -63,7 +63,7 @@ mounted(){
   font-size:1.6em;
 }
 .carousel-image{
-  min-height:30em;
+  
 }
 #image-gray-overlay{
   filter:brightness(60%);

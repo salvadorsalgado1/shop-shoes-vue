@@ -32,7 +32,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
   body {
-    background: url('./assets/backgrounds/dark-grain.jpg') no-repeat center center fixed; 
+    background: url('./assets/backgrounds/brown-grain.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
