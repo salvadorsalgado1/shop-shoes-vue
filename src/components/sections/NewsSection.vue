@@ -43,6 +43,17 @@ export default {
   -o-background-size: cover;
   background-size: cover;
  }
+ @media only screen and (max-width: 600px) {
+  body {
+  background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment:scroll;
+  }
+}
+ 
  .news{
     height:80vh;
     display:flex;

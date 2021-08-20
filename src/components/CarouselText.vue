@@ -52,7 +52,7 @@ export default {
 mounted(){
      $(document).ready(function(){
       $('.carousel-news').carousel({
-        interval: 1000
+        interval: 1500
       })
 });
 }
@@ -62,9 +62,7 @@ mounted(){
 .entry-desc{
   font-size:1.6em;
 }
-.carousel-image{
-  
-}
+
 #image-gray-overlay{
   filter:brightness(60%);
 }
