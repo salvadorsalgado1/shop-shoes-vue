@@ -7,9 +7,9 @@
                         <h2 class="display-4">Achieve Greatness</h2>
                         <p class="achieve-p">Train your mind. Train your game.</p>
                         <router-link class="btn btn-secondary btn-block mb-4" :to="{name:'Trending'}">Shop Now</router-link>
-
+ 
                   </div>
-                 
+                 <!--Testing Repo-->
               </div>
           </div>
       </div>
