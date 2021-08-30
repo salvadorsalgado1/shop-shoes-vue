@@ -1,3 +1,8 @@
+Project URL
+
+https://shop-online-vue.herokuapp.com/#/
+
+
 # client
 
 ## Project setup
