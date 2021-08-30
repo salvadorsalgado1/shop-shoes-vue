@@ -1,12 +1,12 @@
 <template>
-  <div class="third-section">
+  <div class="third-section mt-4">
       <div class="achieve">
-          <div class="container">
+          <div class="container mt-4">
               <div class="row">
                   <div class="col-md-6 col-sm-6">
-                        <h2 class="display-3">Achieve Greatness</h2>
+                        <h2 class="display-4">Achieve Greatness</h2>
                         <p class="achieve-p">Train your mind. Train your game.</p>
-                        <router-link class="btn btn-secondary btn-block" :to="{name:'Trending'}">Shop Now</router-link>
+                        <router-link class="btn btn-secondary btn-block mb-4" :to="{name:'Trending'}">Shop Now</router-link>
 
                   </div>
                  
@@ -37,7 +37,7 @@ export default {
   background-size: cover;
  }
  .achieve{
-    height:60vh;
+    height:100%;
     display:flex;
     align-items:center;
     justify-content: end;

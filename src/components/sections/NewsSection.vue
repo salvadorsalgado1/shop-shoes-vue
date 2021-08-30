@@ -1,7 +1,7 @@
 <template>
   <div class="news-section">
     <div class="news">
-      <div class="container">
+      <div class="container mb-4 mt-4">
         
         <div class="row">
           <div class="col-md-5 col-sm-12">
@@ -43,19 +43,8 @@ export default {
   -o-background-size: cover;
   background-size: cover;
  }
- @media only screen and (max-width: 600px) {
-  body {
-  background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment:scroll;
-  }
-}
- 
  .news{
-    height:80vh;
+    height:100%;
     display:flex;
     align-items:center;
     justify-content: center;
