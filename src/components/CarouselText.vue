@@ -14,7 +14,7 @@
         <img id="image-gray-overlay" class="d-block w-100" src="@/assets/soccer-cleat-1.jpg" alt="First slide"> 
       <div class="carousel-caption d-none d-md-block">
           <h2 class="display-3">Sports News</h2>
-          <p class="lead">Take a look at this week's top headlines.</p>
+          <p class="lead">Take a look at this week's top headlines!</p>
       </div>
     </div>
      
