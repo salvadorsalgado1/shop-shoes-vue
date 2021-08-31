@@ -2,7 +2,6 @@
   <section class="news-section">
     <div class="news">
       <div class="container mb-4 mt-4">
-        
         <div class="row">
           <div class="col-md-5 col-sm-12">
             <h2 class="display-4">Soled Out <br/>News Center</h2>
@@ -21,7 +20,6 @@
 import CarouselText from '../CarouselText'
 export default {
   components:{CarouselText},
-  
  data(){
    return{
      news:[]
@@ -32,18 +30,24 @@ export default {
      }
 }
 </script>
-
 <style>
 .news-section {
   
   color: white;
-  background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center center fixed;
+  background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center center;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-   
+  -moz-background-size: cover;   
   background-size: cover;
  }
+ @media only screen and (max-width: 767px) {
+.third-section {
+        background: url("../../assets/backgrounds/sports.jpg") start;
+        
+    }
+}
  .news{
+       background-color:rgba(0, 0, 0, 0.301);
+
     height:100%;
     display:flex;
     align-items:center;

@@ -14,8 +14,7 @@
     <Squares/>
     </div>
     <ThirdSection/>
-    <SecondSection/>
-    <NewsSection/>
+     <NewsSection/>
      
   </div>
 </template>
