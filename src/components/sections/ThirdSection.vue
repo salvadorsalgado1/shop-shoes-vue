@@ -1,10 +1,13 @@
 <template>
-  <div class="third-section mt-4">
+  <section class="third-section mt-4">
       <div class="achieve">
           <div class="container mt-4">
+              <h2 class="display-4">Achieve Greatness</h2>
               <div class="row">
                   <div class="col-md-6 col-sm-6">
-                        <h2 class="display-4">Achieve Greatness</h2>
+                      <ShoeCarousel/>
+                  </div>
+                  <div class="col-md-6 col-sm-6">
                         <p class="achieve-p">Train your mind. Train your game.</p>
                         <router-link class="btn btn-secondary btn-block mb-4" :to="{name:'Trending'}">Shop Now</router-link>
                   </div>
@@ -12,11 +15,12 @@
               </div>
           </div>
       </div>
-  </div>
+  </section>
 </template>
 <script>
+import ShoeCarousel from '../ShoeCarousel'
 export default {
-
+components:{ShoeCarousel}
 };
 </script>
 <style>
@@ -27,15 +31,20 @@ export default {
      font-size:1.8em;
  }
 .third-section {
-  height: 50vh;
-  width:auto;
-  color: white;
-  background: url("../../assets/backgrounds/sports.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+     
+    color: white;
+    background: url("../../assets/backgrounds/sports.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+     
+    background-size: cover;
  }
+@media only screen and (max-width: 767px) {
+.third-section {
+        background: url("../../assets/backgrounds/sports.jpg") start;
+        
+    }
+}
  .achieve{
     height:100%;
     display:flex;

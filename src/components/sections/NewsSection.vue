@@ -1,5 +1,5 @@
 <template>
-  <div class="news-section">
+  <section class="news-section">
     <div class="news">
       <div class="container mb-4 mt-4">
         
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -35,13 +35,12 @@ export default {
 
 <style>
 .news-section {
-  height: 50vh;
-  width:auto;
+  
   color: white;
   background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+   
   background-size: cover;
  }
  .news{

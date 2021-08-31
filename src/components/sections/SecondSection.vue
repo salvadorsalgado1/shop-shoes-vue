@@ -1,11 +1,8 @@
 <template>
-  <div class="second-section">
+  <section class="second-section">
       <h2 class="display-4 text-left mb-3 ml-3">Gallery</h2>
     <div class="container">
       <div class="row">
-        <div class="col-md-7 mb-3 col-sm-12">
-          <ShoeCarousel/>
-        </div>
         <div class="col-md-5 mb-3 col-sm-12">
           <div class="card card-next-level">
             <div class="card-body">
@@ -16,7 +13,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 import ShoeCarousel from '../../components/ShoeCarousel'
@@ -33,21 +30,19 @@ export default {
 </script>
 
 <style>
-div .second-section{
-    
-    margin:3% 0;
-}
+.second-section{
+  height:100%;
+  color:white;
+ }
+ 
 .next-level{
    font-family:Optima, sans-serif;
-   font-size:3.6em;
+   font-size:2.2em;
  }
 .card-next-level{
   background-image:url('../../assets/shoe-forest.jpg');
   background-size:cover;
   color:white;
 }
-.second-section{
-  height:100%;
-  color:white;
- }
+
 </style>
