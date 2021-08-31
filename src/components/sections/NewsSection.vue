@@ -32,7 +32,6 @@ export default {
 </script>
 <style>
 .news-section {
-  
   color: white;
   background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center center;
   -webkit-background-size: cover;
@@ -42,12 +41,10 @@ export default {
  @media only screen and (max-width: 767px) {
 .third-section {
         background: url("../../assets/backgrounds/sports.jpg") start;
-        
     }
 }
  .news{
-       background-color:rgba(0, 0, 0, 0.301);
-
+    background-color:rgba(0, 0, 0, 0.301);
     height:100%;
     display:flex;
     align-items:center;

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <div class="header">
+    <section>
+      <div class="header">
       <MainHeaderImg/>
     </div>
     <div class="container main-content">
@@ -13,17 +14,18 @@
       <p><a href="#squares" class="btn btn-secondary btn-lg">Learn More</a></p>
     <Squares/>
     </div>
+    </section> 
     <ThirdSection/>
-     <NewsSection/>
-     
+    <NewsSection/>
   </div>
 </template>
 <script>
 import SecondSection from '../components/sections/SecondSection'
 import ThirdSection from '../components/sections/ThirdSection'
 import NewsSection from '../components/sections/NewsSection'
- import Squares from '../components/Squares'
+import Squares from '../components/Squares'
 import MainHeaderImg from '../components/MainHeaderImg'
+import Footer from '../components/sections/Footer'
 export default {
   name: 'Home',
   data(){
@@ -36,7 +38,8 @@ export default {
     MainHeaderImg,
     SecondSection,
     ThirdSection,
-    NewsSection
+    NewsSection,
+    Footer
   },
 }
 </script>

@@ -2,15 +2,16 @@
   <div id="app">
     <Navbar/>
     <router-view/>
-    
+    <Footer/> 
   </div>
 </template>
 <script>
 
 import Navbar from './components/Navbar'
+import Footer from './components/sections/Footer'
 export default {
   components:{
-    Navbar
+    Navbar, Footer
   }
 }
 </script>
@@ -30,15 +31,7 @@ body{
   background-size: cover;
    
 }
-@media only screen and (max-width: 600px) {
-  body {
-    background: url('./assets/backgrounds/brown-grain.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  }
-}
+ 
 
 
 #nav a {

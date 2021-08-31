@@ -2,8 +2,7 @@
   <section class="third-section mt-4">
       <div class="achieve">
           <div class="container mt-4">
-              <h2 class="display-4">Achieve Greatness</h2>
-              <div class="row mb-4">
+               <div class="row mb-4">
                   <div class="col-md-6 col-sm-6">
                       <ShoeCarousel/>
                   </div>
@@ -34,7 +33,7 @@ components:{ShoeCarousel}
     background-color:rgba(0, 0, 0, 0.212);
 }
  .achieve-p{
-     font-size:1.8em;
+     font-size:3em;
  }
 .third-section {
      

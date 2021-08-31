@@ -9,7 +9,6 @@
           <router-link :to='{name:"Cart"}' class="nav-link"><i class="fas fa-shopping-cart"></i>&nbsp;<span class="bg-info amount-cart">{{shoppingCart}}</span></router-link>
         </li>
       </ul>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -66,7 +65,12 @@ computed:{
 .navbar-nav .show>.nav-link{
   color:white;
   font-size:1em;
-
+}
+.navbar-nav .dropdown-menu{
+  background-color: rgba(154, 144, 100, 0.836);
+}
+.dropdown-menu{
+  background-color: rgba(154, 144, 100, 0.712);
 }
 
 
