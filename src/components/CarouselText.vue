@@ -7,7 +7,7 @@
     <li data-target="#carousel-news-indicators" data-slide-to="2"></li>
     <li data-target="#carousel-news-indicators" data-slide-to="3"></li>
     <li data-target="#carousel-news-indicators" data-slide-to="4"></li>
-    <li data-target="#carousel-news-indicators" data-slide-to="5"></li>
+     
   </ol><!--https://getbootstrap.com/docs/5.1/components/carousel/-->
   <div class="carousel-inner" >
     <div class="carousel-item active">

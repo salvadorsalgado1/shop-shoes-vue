@@ -7,7 +7,6 @@
                         <h2 class="display-4">Achieve Greatness</h2>
                         <p class="achieve-p">Train your mind. Train your game.</p>
                         <router-link class="btn btn-secondary btn-block mb-4" :to="{name:'Trending'}">Shop Now</router-link>
- 
                   </div>
                  <!--Testing Repo-->
               </div>
@@ -28,7 +27,8 @@ export default {
      font-size:1.8em;
  }
 .third-section {
-  height: 100%;
+  height: 50vh;
+  width:auto;
   color: white;
   background: url("../../assets/backgrounds/sports.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;

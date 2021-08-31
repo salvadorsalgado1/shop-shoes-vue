@@ -35,7 +35,8 @@ export default {
 
 <style>
 .news-section {
-  height: 100%;
+  height: 50vh;
+  width:auto;
   color: white;
   background: url("../../assets/backgrounds/soccer-field.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
