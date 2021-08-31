@@ -1,6 +1,10 @@
 <template>
   <section class="footer" v-if="this.$route.name !=='Front'">
-        <p class="footer-text text-left ml-3"><a href="https://github.com/salvadorsalgado1/shop-shoes-vue" title="Github"><i id="github-icon" class="mt-1 fab fa-github"></i></a></p>
+        <p class="footer-text text-left ml-3">
+            <a href="https://github.com/salvadorsalgado1/shop-shoes-vue" title="Github">
+            <i id="github-icon" class="mt-1 fab fa-github"></i>
+            </a>
+        </p>
   </section>
 </template>
 
