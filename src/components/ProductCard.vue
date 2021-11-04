@@ -1,5 +1,5 @@
 <template>
-  <div class="staff-pick-card">
+  <div class="staff-pick-card h-100">
     <div class="card staff-pick" id="staff-pick">
       <div class="card-header mb-4">
          <p class="card-title card-heading-h2">{{title}}</p>
@@ -14,9 +14,7 @@
               <br/>{{brand}}
             {{text}}<br/>Product: {{id}}</p>
          </div>
-         
       </div>
-      
         <div class="card-body card-body-text">
           <div v-if="added">
              <SuccessAlert text="Added to cart!"/>
@@ -75,7 +73,6 @@ methods:{
 }
 </script>
 <style>
- 
 .price-amount{
   font-size:1.4em; 
 }
@@ -83,7 +80,9 @@ methods:{
   width:100%;
 }
 #staff-pick{
-  min-height:20em;
-  height:30em;
+  min-height:100%;
+
 }
+ 
+ 
 </style>

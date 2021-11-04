@@ -9,7 +9,6 @@
         <Loading />
       </div>
         <div class="row mb-4">
-          
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
             <ProductCard
               :image="shoe.image_url_one"
@@ -20,14 +19,12 @@
               :brand="shoe.brand"
               :stars="shoe.rating"
               :reviews="shoe.reviews"
-
             />
           </div>
         </div>
       </div>
   </div>
 </template>
-
 <script>
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
@@ -45,20 +42,15 @@ data(){
     loading:false
   }
 },
-methods:{
-  
-},
 computed:{
   shoes(){
     let shoe = this.$store.state.clearance
     return shoe;
   },
-  
 },
 mounted(){
     if(this.$store.state.clearance == null){
       this.loading=true
-     
       Axios.get('/api/clearance/info')
       .then(response=>{
         console.log(response.data)
@@ -67,6 +59,5 @@ mounted(){
       })
     }
   }
-
 }
 </script>

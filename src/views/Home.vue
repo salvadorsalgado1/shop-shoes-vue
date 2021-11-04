@@ -5,28 +5,25 @@
       <MainHeaderImg/>
     </div>
     <div class="container main-content">
-      <h1 class="display-4 text-white">Welcome to Soled Out Kicks!</h1>
+      <h1 class="display-4 text-white">Soled Out Kicks!</h1>
       <p class="text-white lead header-text-p">
         This site features only the coolest kicks and a 
         variety of shoes to choose from. Check 
         out our clearance section for exclusive deals!
       </p>
-      <p><a href="#squares" class="btn btn-secondary btn-lg">Learn More</a></p>
+      <p><a href="#squares" class="btn btn-secondary">Learn More</a></p>
     <Squares/>
     </div>
     </section> 
-    <ThirdSection/>
-    <NewsSection/>
-  </div>
+    <Promotion/>
+   </div>
 </template>
 <script>
 import SecondSection from '../components/sections/SecondSection'
-import ThirdSection from '../components/sections/ThirdSection'
-import NewsSection from '../components/sections/NewsSection'
-import Squares from '../components/Squares'
+import Promotion from '../components/sections/Promotion'
+ import Squares from '../components/Squares'
 import MainHeaderImg from '../components/MainHeaderImg'
-import Footer from '../components/sections/Footer'
-export default {
+ export default {
   name: 'Home',
   data(){
     return{
@@ -37,10 +34,8 @@ export default {
     Squares,
     MainHeaderImg,
     SecondSection,
-    ThirdSection,
-    NewsSection,
-    Footer
-  },
+    Promotion,
+   },
 }
 </script>
 <style>
