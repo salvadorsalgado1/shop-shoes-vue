@@ -81,7 +81,6 @@ methods:{
 }
 #staff-pick{
   min-height:100%;
-
 }
  
  

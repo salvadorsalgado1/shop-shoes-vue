@@ -16,6 +16,7 @@
     </div>
     </section> 
     <Promotion/>
+    <WhoWeAre/>
    </div>
 </template>
 <script>
@@ -23,7 +24,8 @@ import SecondSection from '../components/sections/SecondSection'
 import Promotion from '../components/sections/Promotion'
  import Squares from '../components/Squares'
 import MainHeaderImg from '../components/MainHeaderImg'
- export default {
+import WhoWeAre from '../components/sections/WhoWeAre'
+  export default {
   name: 'Home',
   data(){
     return{
@@ -34,7 +36,8 @@ import MainHeaderImg from '../components/MainHeaderImg'
     Squares,
     MainHeaderImg,
     SecondSection,
-    Promotion,
+    Promotion, WhoWeAre
+    
    },
 }
 </script>

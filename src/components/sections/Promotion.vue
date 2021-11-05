@@ -2,6 +2,7 @@
   <section class="third-section mt-4">
       <div class="achieve">
           <div class="container mt-4">
+              <h2 class="heading-promo">What We're About</h2>
                <div class="row mb-4">
                    <div class="col-md-4 col-sm-12 mb-3">
                        <div class="card sales-card">
@@ -17,7 +18,7 @@
                             <div class="card-body">
                                 <h3 class="card-header-sales">We Deliver the Highest Quality</h3>
                                 <img src="@/assets/icons/icons8-good-quality-96.png" alt=""/>
-                                <p class="card-text-sales mt-auto">We choose only the finest materials</p>
+                                <p class="card-text-sales">We choose only the finest materials</p>
                             </div>
                         </div>
                    </div>
@@ -42,18 +43,23 @@ components:{ShoeCarousel}
 };
 </script>
 <style>
- 
+ .heading-promo{
+     color:white;
+     font-size:2.4em;
+     margin-top:40px;
+     margin-bottom:40px;
+ }
 .sales-card{
     min-height:100%;
-   
 }
 .card-text-sales{
-    font-size:.8em;
+    margin-top:30px;
+    font-size:1.2em;
     color:teal;
     justify-content:end;
 }
 .card-header-sales{
-    font-size:1em;
+    font-size:1.4em;
     color:teal;
     font-weight: 500;
 }
@@ -65,7 +71,7 @@ components:{ShoeCarousel}
  }
 .third-section {
      
-     background-color:rgb(208, 235, 247);
+     background-color:rgb(207, 205, 203);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
