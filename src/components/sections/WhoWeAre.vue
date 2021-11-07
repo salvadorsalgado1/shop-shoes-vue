@@ -4,7 +4,7 @@
           <h2 class="mt-4">This is who we are!</h2>
           <div class="row">
               <div class="col-md-6 col-sm-12 mt-5 mb-5">
-                  <img class="rounded-circle about-set" src="../../assets/shoes-setup.jpg" alt=""/>
+                  <img class="lazy rounded-circle about-set" src="../../assets/shoes-setup.jpg" alt=""/>
               </div>
               <div class="col-md-6 col-sm-12  mt-5 mb-5">
                 <p class="who-we-are-text lead">We are a small giant company that deals with the best styles and makes of shoes. We have been around for more than 50 years. We have evolved with time and kept up with the latest
