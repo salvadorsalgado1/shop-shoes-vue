@@ -12,6 +12,7 @@ import Shoe from '../views/Shoe.vue'
 import Media from '../views/Media.vue'
 import EditShoe from '../views/EditShoe.vue'
 import Landing from '../views/Landing.vue'
+import Four from '../views/Four.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -85,6 +86,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/:catchall(.*)',
+    name: 'Four',
+    component: Four 
   }
 ]
 
