@@ -1,8 +1,8 @@
 <template>
-<div v-if="this.$route.name !== 'Front'" class="nav-bar mb-4">
+<div v-if="this.$route.name !== 'Landing'" class="nav-bar mb-4">
   <nav class="navbar navbar-expand-lg navbar-light lead" style="background-color: rgba(154,144,100,.5);"> 
-  <router-link class="navbar-brand lead" :to='{name:"Front"}'>
-    <img src="@/assets/logo_transparent-2.png" width="50" height="50" alt="Shoe Creative, Front Page">
+  <router-link class="navbar-brand lead" :to='{name:"Landing"}'>
+    <img src="@/assets/logos/logo_transparent-2.png" width="50" height="50" alt="Shoe Creative, Front Page">
   </router-link>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">

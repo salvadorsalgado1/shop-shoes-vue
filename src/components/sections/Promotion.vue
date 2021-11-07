@@ -37,9 +37,8 @@
   </section>
 </template>
 <script>
-import ShoeCarousel from '../ShoeCarousel'
-export default {
-components:{ShoeCarousel}
+ export default {
+ 
 };
 </script>
 <style>
@@ -70,18 +69,11 @@ components:{ShoeCarousel}
      font-size:3em;
  }
 .third-section {
-     
      background-color:rgb(207, 205, 203);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
  }
-@media only screen and (max-width: 767px) {
-.third-section {
-        background: url("../../assets/backgrounds/sports.jpg") start;
-        
-    }
-}
  .achieve{
     height:100%;
     display:flex;

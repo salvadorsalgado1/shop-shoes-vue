@@ -30,42 +30,36 @@ import Total from '../components/Total'
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 export default {
-name:'Cart',
-components:{
-  HeaderImg,
-  ProductCard,
-  Total
-},
-data(){
-  return{
-      cart:[]
-  }
-},
-mounted(){
-     
-},
-methods:{
-    removeFromCart(index){
-        this.$store.commit('removeCartItem', {index});
-        console.log(index);
-    }
-},
-computed:{
-    checkoutCart(){
-        let basket = this.$store.state.checkout
-        return basket;
+    name:'Cart',
+    components:{
+        HeaderImg,
+        ProductCard,
+        Total
     },
-    emptyCart(){
-        if(this.$store.state.cart > 0){
-            return true;
-        }else{
-            return false;
+    data(){
+        return{
+            cart:[]
         }
-    }
-    
-},
-
-
+    },
+    methods:{
+        removeFromCart(index){
+            this.$store.commit('removeCartItem', {index});
+            console.log(index);
+        }
+    },
+    computed:{
+        checkoutCart(){
+            let basket = this.$store.state.checkout
+            return basket;
+        },
+        emptyCart(){
+            if(this.$store.state.cart > 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    },
 }
 </script>
 <style>

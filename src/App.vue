@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-
 import Navbar from './components/Navbar'
  export default {
   components:{Navbar}
@@ -39,5 +38,4 @@ body{
 .card-heading-h2{
   font-size:1.4em;
 }
-
 </style>

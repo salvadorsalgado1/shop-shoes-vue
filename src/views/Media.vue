@@ -16,22 +16,12 @@
               </div>
           </div>
       </div>
-    
-      
   </div>
 </template>
 
 <script>
 export default {
-name:'Media',
-data(){
-    return{
-
-    }
-}
+name:'Media'
 }
 </script>
-
-<style>
-
-</style>
+ 

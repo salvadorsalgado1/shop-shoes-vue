@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Front from '../views/Front.vue'
-import Clearance from '../views/Clearance.vue'
+ import Clearance from '../views/Clearance.vue'
 import Latest from '../views/Latest.vue'
 import MenShoes from '../views/MenShoes.vue'
 import StaffPicks from '../views/StaffPicks.vue'
@@ -12,13 +11,14 @@ import Cart from '../views/Cart.vue'
 import Shoe from '../views/Shoe.vue'
 import Media from '../views/Media.vue'
 import EditShoe from '../views/EditShoe.vue'
+import Landing from '../views/Landing.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Front',
-    component: Front
+    name: 'Landing',
+    component: Landing
   },
   {
     path: '/home',

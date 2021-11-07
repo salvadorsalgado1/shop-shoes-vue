@@ -8,14 +8,8 @@
   </div>
 </template>
 <script>
-import Progress from '../components/Progress'
-export default {
-components:{
- Progress
-},
-mounted(){
-  
-}
+ export default {
+
 }
 </script>
 

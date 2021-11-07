@@ -2,14 +2,12 @@
   <div class="about">
     <div class="container text-white">
       <img class="img-fluid" src="@/assets/logos/transparent-logo.png" alt="Soled Out Kicks"/>
-      
       <h1 class="text-white about-text mt-4">About Us</h1>
-    <p class="text-white about-text text-left">Soled Out Kicks caters to all that wish to change their perspective of shoes. Shoes are not only things we wear. Shoes are a statement 
+      <p class="text-white about-text text-left">Soled Out Kicks caters to all that wish to change their perspective of shoes. Shoes are not only things we wear. Shoes are a statement 
       that has the power to define our everyday lives. They describe how we feel, how we do our jobs, how much of our goal we are accomplishing. They protect our most 
       foundation to which we use everyday. It is important to note that we only sell shoes that consist of top notch quality. We aim for greatness and 
       do not give up until the customer is satisfied with her/his descision on a pair of shoes.</p>
        <h2 class="text-white">History</h2>
-       
        <img class="float-end" src="@/assets/soled-out-kicks-classic.jpg" alt=""/>
        <p class="about-text text-left mt-4">It was all started by a local family in a small town around Los Angeles, California. The shoemakers were convinced that shoes will be around forever.
          There will be advances in styles and different colors. 
@@ -24,13 +22,11 @@
 <script>
 export default {
   name: 'About',
-  
   data(){
     return{
       staffPicks:[]
     }
   },
-  
 }
 </script>
 <style>

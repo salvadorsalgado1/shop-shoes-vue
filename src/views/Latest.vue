@@ -10,7 +10,6 @@
       </div>
         <div class="row mb-4">
           <div v-for="(shoe, id) in shoes" :key="id" class="col-md-6 col-sm-12 col-lg-4 mt-4">
-             
             <ProductCard
               :image="shoe.image_url_one"
               :title="shoe.product_title"
@@ -25,17 +24,15 @@
       </div>
   </div>
 </template>
-
 <script>
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 import Loading from '../components/Loading'
 import SuccessAlert from '../components/SuccessAlert'
-import Axios from 'axios'
+
 export default {
 name:'Latest',
 components:{
-
   HeaderImg,
   ProductCard,
   Loading,
@@ -47,32 +44,18 @@ data(){
     added:false
   }
 },
-methods:{
-  
-},
 computed:{
   shoes(){
     let shoe = this.$store.state.latest
     return shoe;
   },
-  
 },
 mounted(){
     if(this.$store.state.latest == null){
-      this.loading=true
-      
-      Axios.get('/api/latest/info')
-      .then(response=>{
-        console.log(response.data)
-        this.$store.state.latest = response.data
-        this.loading=false;
-      })
+      this.loading=true;
+      this.$store.dispatch('dispatchLatest');
+      this.loading=false;
     }
   }
-
 }
 </script>
-
-<style>
-
-</style>

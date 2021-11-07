@@ -20,11 +20,10 @@
    </div>
 </template>
 <script>
-import SecondSection from '../components/sections/SecondSection'
-import Promotion from '../components/sections/Promotion'
- import Squares from '../components/Squares'
-import MainHeaderImg from '../components/MainHeaderImg'
-import WhoWeAre from '../components/sections/WhoWeAre'
+  import Promotion from '../components/sections/Promotion'
+  import Squares from '../components/Squares'
+  import MainHeaderImg from '../components/MainHeaderImg'
+  import WhoWeAre from '../components/sections/WhoWeAre'
   export default {
   name: 'Home',
   data(){
@@ -35,17 +34,12 @@ import WhoWeAre from '../components/sections/WhoWeAre'
   components: {
     Squares,
     MainHeaderImg,
-    SecondSection,
     Promotion, WhoWeAre
-    
    },
 }
 </script>
-<style>
-
- 
+<style> 
 .shoe-creative-header{
   width:30% !important;
 }
-
 </style>

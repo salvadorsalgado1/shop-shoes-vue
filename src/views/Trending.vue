@@ -31,45 +31,28 @@
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 import Loading from '../components/Loading'
-import Axios from 'axios'
 export default {
-name:'Trending',
-components:{
-  HeaderImg,
-  ProductCard,
-  Loading
-},
-data(){
-  return{
-    loading:false
-  }
-},
-methods:{
-  
-},
-computed:{
-  shoes(){
-    let shoe = this.$store.state.trending
-    return shoe;
+  name:'Trending',
+  components:{
+    HeaderImg, ProductCard, Loading
   },
-  
-},
-mounted(){
+  data(){
+    return{
+      loading:false
+    }
+  },
+  computed:{
+    shoes(){
+      let shoe = this.$store.state.trending
+      return shoe;
+    },
+  },
+  mounted(){
     if(this.$store.state.trending == null){
       this.loading=true;
-      console.log("picks null")
-      Axios.get('/api/trending/info')
-      .then(response=>{
-        console.log(response.data)
-        this.$store.state.trending = response.data
-        this.loading=false;
-      })
+      this.$store.dispatch('dispatchTrending');
+      this.loading=false;
     }
   }
-
 }
 </script>
-
-<style>
-
-</style>

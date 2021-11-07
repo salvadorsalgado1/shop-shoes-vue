@@ -25,50 +25,34 @@
       </div>
   </div>
 </template>
-
 <script>
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
-import Axios from 'axios'
 import Loading from '../components/Loading'
 export default {
-name:'MenShoes',
-components:{
-  HeaderImg,
-  ProductCard,
-  Loading
-},
-data(){
-  return{
-    loading:false
-  }
-},
-methods:{
-  
-},
-computed:{
-  shoes(){
-    let shoe = this.$store.state.men
-    return shoe;
+  name:'MenShoes',
+  components:{
+    HeaderImg,
+    ProductCard,
+    Loading
   },
-  
-},
-mounted(){
+  data(){
+    return{
+      loading:false
+    }
+  },
+  computed:{
+    shoes(){
+      let shoe = this.$store.state.men
+      return shoe;
+    },
+  },
+  mounted(){
     if(this.$store.state.men == null){
       this.loading=true;
-      console.log("picks null")
-      Axios.get('/api/men/info')
-      .then(response=>{
-        console.log(response.data)
-        this.$store.state.men = response.data
-        this.loading=false;
-      })
+      this.$store.dispatch('dispatchMenShoes');
+      this.loading=false;
     }
   }
-
 }
 </script>
-
-<style>
-
-</style>

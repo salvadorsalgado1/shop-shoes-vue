@@ -29,34 +29,29 @@
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
 import Loading from '../components/Loading'
-import Axios from 'axios'
 export default {
-name:'Clearance',
-components:{
-  HeaderImg,
-  ProductCard,
-  Loading
-},
-data(){
-  return{
-    loading:false
-  }
-},
-computed:{
-  shoes(){
-    let shoe = this.$store.state.clearance
-    return shoe;
+  name:'Clearance',
+  components:{
+    HeaderImg,
+    ProductCard,
+    Loading
   },
-},
-mounted(){
+  data(){
+    return{
+      loading:false
+    }
+  },
+  computed:{
+    shoes(){
+      let shoe = this.$store.state.clearance
+      return shoe;
+    },
+  },
+  mounted(){
     if(this.$store.state.clearance == null){
-      this.loading=true
-      Axios.get('/api/clearance/info')
-      .then(response=>{
-        console.log(response.data)
-        this.$store.state.clearance = response.data
-        this.loading=false
-      })
+      this.loading=true;
+      this.$store.dispatch('dispatchClearance');
+      this.loading=false;
     }
   }
 }

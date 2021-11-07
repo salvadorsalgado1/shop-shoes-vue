@@ -4,7 +4,6 @@
           <h2 class="mt-4">This is who we are!</h2>
           <div class="row">
               <div class="col-md-6 col-sm-12 mt-5 mb-5">
-                  
                   <img class="rounded-circle about-set" src="../../assets/shoes-setup.jpg" alt=""/>
               </div>
               <div class="col-md-6 col-sm-12  mt-5 mb-5">

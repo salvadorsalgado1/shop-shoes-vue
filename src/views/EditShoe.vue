@@ -5,7 +5,6 @@
       <div class="card">
           <div class="card-body">
               <h3>Shoe With ID: {{id}} </h3>
-               
               <form @submit.prevent="submitEdits(editShoeItem.id, editShoeItem.brand, editShoeItem.title, editShoeItem.price, editShoeItem.url1, editShoeItem.url2, editShoeItem.url3, editShoeItem.url4, editShoeItem.url5)">
                   <div class="row">
                     <div class="col-lg-6 col-sm-12">
@@ -76,11 +75,6 @@ import Axios from 'axios';
 export default {
     props:['id', 'shoeBrand', 'shoeTitle', 'shoePrice', 'shoeCont', 
     'url1', 'url2', 'url3', 'url4', 'url5'],
-    data(){
-        return{
-              
-        }
-    },
     methods:{
          submitEdits(id, brand, title, price, url1, url2, url3, url4, url5){
             let amount = parseInt(price);

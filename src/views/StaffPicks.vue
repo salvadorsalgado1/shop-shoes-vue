@@ -30,46 +30,30 @@
 import Loading from '../components/Loading'
 import HeaderImg from '../components/HeaderImg'
 import ProductCard from '../components/ProductCard'
-import Axios from 'axios'
 export default {
-name:'StaffPicks',
-components:{
-  HeaderImg,
-  ProductCard,
-  Loading
-},
-data(){
-  return{
-    loading:false
-  }
-},
-methods:{
-  
-},
-computed:{
-  shoes(){
-    let shoe = this.$store.state.picks
-    return shoe;
+  name:'StaffPicks',
+  components:{
+    HeaderImg,
+    ProductCard,
+    Loading
   },
-  
-},
-mounted(){
+  data(){
+    return{
+      loading:false
+    }
+  },
+  computed:{
+    shoes(){
+      let shoe = this.$store.state.picks
+      return shoe;
+    },
+  },
+  mounted(){
     if(this.$store.state.picks == null){
       this.loading=true;
-      Axios.get('/api/picks/info')
-      .then(response=>{
-        console.log(response.data)
-        
-        this.$store.state.picks = response.data
-        this.loading=false;
-      })
-
+      this.$store.dispatch('dispatchStaff')
+      this.loading=false;
     }
   }
-
 }
 </script>
-
-<style>
-
-</style>
