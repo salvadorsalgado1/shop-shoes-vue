@@ -50,6 +50,7 @@ export default {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: 2;
   }
 }
 video{
