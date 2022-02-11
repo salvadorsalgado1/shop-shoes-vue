@@ -11,7 +11,6 @@
         variety of shoes to choose from. Check 
         out our clearance section for exclusive deals!
       </p>
-      <p><a href="#squares" class="btn btn-secondary">Learn More</a></p>
     <Squares/>
     </div>
     </section> 
